@@ -21,7 +21,7 @@ struct IssueRow: View {
                     Text(issue.issueTitle)
                         .font(.headline)
                         .lineLimit(1)
-                    Text("No tags")
+                    Text(issue.issueTagsList)
                         .foregroundStyle(.secondary)
                         .lineLimit(1)
                 }
@@ -31,7 +31,7 @@ struct IssueRow: View {
                     Text(issue.issueCreationDate.formatted(date: .numeric, time: .omitted))
                         .font(.subheadline)
                     if issue.completed {
-                        Text("CLOSED")
+                        Text(issue.issueStatus)
                             .font(.body.smallCaps())
                     }
                 }
