@@ -11,6 +11,11 @@
 		5238DF192A67371B0064A504 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF182A67371B0064A504 /* ContentView.swift */; };
 		5238DF1B2A67371D0064A504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5238DF1A2A67371D0064A504 /* Assets.xcassets */; };
 		5238DF1F2A67371D0064A504 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5238DF1E2A67371D0064A504 /* Preview Assets.xcassets */; };
+		5238DF272A674FC70064A504 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF252A674FC70064A504 /* Main.xcdatamodeld */; };
+		5238DF2A2A67526E0064A504 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF292A67526E0064A504 /* DataController.swift */; };
+		5238DF2C2A676BFE0064A504 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF2B2A676BFE0064A504 /* SidebarView.swift */; };
+		5238DF2E2A676C0B0064A504 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF2D2A676C0B0064A504 /* DetailView.swift */; };
+		5238DF302A676FC00064A504 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF2F2A676FC00064A504 /* Filter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,12 @@
 		5238DF1A2A67371D0064A504 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5238DF1C2A67371D0064A504 /* Portfolio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Portfolio.entitlements; sourceTree = "<group>"; };
 		5238DF1E2A67371D0064A504 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5238DF262A674FC70064A504 /* Main.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Main.xcdatamodel; sourceTree = "<group>"; };
+		5238DF282A6752390064A504 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5238DF292A67526E0064A504 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		5238DF2B2A676BFE0064A504 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		5238DF2D2A676C0B0064A504 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		5238DF2F2A676FC00064A504 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +63,14 @@
 		5238DF152A67371B0064A504 /* Portfolio */ = {
 			isa = PBXGroup;
 			children = (
+				5238DF282A6752390064A504 /* Info.plist */,
 				5238DF162A67371B0064A504 /* PortfolioApp.swift */,
+				5238DF2B2A676BFE0064A504 /* SidebarView.swift */,
+				5238DF2F2A676FC00064A504 /* Filter.swift */,
+				5238DF2D2A676C0B0064A504 /* DetailView.swift */,
 				5238DF182A67371B0064A504 /* ContentView.swift */,
+				5238DF292A67526E0064A504 /* DataController.swift */,
+				5238DF252A674FC70064A504 /* Main.xcdatamodeld */,
 				5238DF1A2A67371D0064A504 /* Assets.xcassets */,
 				5238DF1C2A67371D0064A504 /* Portfolio.entitlements */,
 				5238DF1D2A67371D0064A504 /* Preview Content */,
@@ -139,6 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5238DF302A676FC00064A504 /* Filter.swift in Sources */,
+				5238DF272A674FC70064A504 /* Main.xcdatamodeld in Sources */,
+				5238DF2E2A676C0B0064A504 /* DetailView.swift in Sources */,
+				5238DF2A2A67526E0064A504 /* DataController.swift in Sources */,
+				5238DF2C2A676BFE0064A504 /* SidebarView.swift in Sources */,
 				5238DF192A67371B0064A504 /* ContentView.swift in Sources */,
 				5238DF172A67371B0064A504 /* PortfolioApp.swift in Sources */,
 			);
@@ -269,6 +291,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Portfolio/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -307,6 +330,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Portfolio/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -354,6 +378,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5238DF252A674FC70064A504 /* Main.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5238DF262A674FC70064A504 /* Main.xcdatamodel */,
+			);
+			currentVersion = 5238DF262A674FC70064A504 /* Main.xcdatamodel */;
+			path = Main.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5238DF0B2A67371B0064A504 /* Project object */;
 }
