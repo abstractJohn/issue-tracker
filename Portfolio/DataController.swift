@@ -13,6 +13,8 @@ class DataController: ObservableObject {
     @Published var selectedFilter: Filter? = Filter.all
     @Published var selectedIssue: Issue?
     
+    @Published var filterText = ""
+    
     private var saveTask: Task<Void, Error>?
     
     static var preview: DataController = {
@@ -66,6 +68,33 @@ class DataController: ObservableObject {
         }
 
         try? viewContext.save()
+    }
+    
+    func issuesForSelectedFilter() -> [Issue] {
+        let filter = selectedFilter ?? .all
+        var predicates = [NSPredicate]()
+        
+        if let tag = filter.tag {
+            let tagPredicate = NSPredicate(format: "tags CONTAINS %@", tag)
+            predicates.append(tagPredicate)
+        } else {
+            let datePredicate = NSPredicate(format: "modifiedDate > %@", filter.minModificationDate as NSDate)
+            predicates.append(datePredicate)
+        }
+        
+        let trimmedFilterText = filterText.trimmingCharacters(in: .whitespaces)
+        if trimmedFilterText.isEmpty == false {
+            let titlePredicate = NSPredicate(format:"title CONTAINS[c] %@", trimmedFilterText)
+            let contentPredicate = NSPredicate(format: "content CONTAINS[c] %@", trimmedFilterText)
+            let combinedPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [titlePredicate, contentPredicate])
+            predicates.append(combinedPredicate)
+        }
+        
+        let request = Issue.fetchRequest()
+        request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
+        let allIssues = (try? container.viewContext.fetch(request)) ?? []
+        
+        return allIssues.sorted()
     }
     
     func save() {
