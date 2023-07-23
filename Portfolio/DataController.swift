@@ -142,10 +142,10 @@ class DataController: ObservableObject {
         
         let request = Issue.fetchRequest()
         request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: predicates)
-        request.sortDescriptors = [NSSortDescriptor(key: sortType.rawValue, ascending: sortNewestFirst)]
+        request.sortDescriptors = [NSSortDescriptor(key: sortType.rawValue, ascending: !sortNewestFirst)]
         let allIssues = (try? container.viewContext.fetch(request)) ?? []
         
-        return allIssues.sorted()
+        return allIssues
     }
     
     func save() {
