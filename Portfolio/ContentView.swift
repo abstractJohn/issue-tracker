@@ -21,6 +21,7 @@ struct ContentView: View {
         .searchable(text: $dataController.filterText, tokens: $dataController.filterTokens, suggestedTokens: .constant(dataController.suggestedFilterTokens), prompt: "Filter issues, or type # to add tags") { tag in
                 Text(tag.tagName)
         }
+        .keyboardType(.twitter)
         .toolbar {
             Menu {
                 Button(dataController.filterEnabled ? "Turn Filter Off" : "Turn Filter On") {
