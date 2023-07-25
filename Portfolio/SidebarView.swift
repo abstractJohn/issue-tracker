@@ -25,37 +25,48 @@ struct SidebarView: View {
         }
     }
     
+    func smartFiltersSection() -> some View {
+        Section("Smart Filters") {
+            ForEach(smartFilters) { filter in
+                NavigationLink(value: filter) {
+                    Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
+                }
+            }
+        }
+    }
+    
+    func tagFiltersSection() -> some View {
+        Section("Tags") {
+            ForEach(tagFilters) { filter in
+                NavigationLink(value: filter) {
+                    Label(filter.name, systemImage: filter.icon)
+                        .badge(filter.activeIssuesCount)
+                        .contextMenu {
+                            Button {
+                                rename(filter)
+                            } label: {
+                                Label("Rename", systemImage: "pencil")
+                            }
+                            
+                            Button(role: .destructive) {
+                                delete(filter)
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
+                        .accessibilityElement()
+                        .accessibilityLabel(filter.name)
+                        .accessibilityHint("\(filter.activeIssuesCount) issues")
+                }
+            }
+            .onDelete(perform: delete)
+        }
+    }
+    
     var body: some View {
         List(selection: $dataController.selectedFilter) {
-            Section("Smart Filters") {
-                ForEach(smartFilters) { filter in
-                    NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
-                    }
-                }
-            }
-            Section("Tags") {
-                ForEach(tagFilters) { filter in
-                    NavigationLink(value: filter) {
-                        Label(filter.name, systemImage: filter.icon)
-                            .badge(filter.tag?.tagActiveIssues.count ?? 0)
-                            .contextMenu {
-                                Button {
-                                    rename(filter)
-                                } label: {
-                                    Label("Rename", systemImage: "pencil")
-                                }
-                                
-                                Button(role: .destructive) {
-                                    delete(filter)
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
-                            }
-                    }
-                }
-                .onDelete(perform: delete)
-            }
+            smartFiltersSection()
+            tagFiltersSection()
         }
         .toolbar {
             Button(action: dataController.newTag) {
