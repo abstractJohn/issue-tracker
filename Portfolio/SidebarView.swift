@@ -25,68 +25,21 @@ struct SidebarView: View {
         }
     }
     
-    func smartFiltersSection() -> some View {
-        Section("Smart Filters") {
-            ForEach(smartFilters) { filter in
-                NavigationLink(value: filter) {
-                    Label(LocalizedStringKey(filter.name), systemImage: filter.icon)
-                }
-            }
-        }
-    }
-    
-    func tagFiltersSection() -> some View {
-        Section("Tags") {
-            ForEach(tagFilters) { filter in
-                NavigationLink(value: filter) {
-                    Label(filter.name, systemImage: filter.icon)
-                        .badge(filter.activeIssuesCount)
-                        .contextMenu {
-                            Button {
-                                rename(filter)
-                            } label: {
-                                Label("Rename", systemImage: "pencil")
-                            }
-                            
-                            Button(role: .destructive) {
-                                delete(filter)
-                            } label: {
-                                Label("Delete", systemImage: "trash")
-                            }
-                        }
-                        .accessibilityElement()
-                        .accessibilityLabel(filter.name)
-                        .accessibilityHint("\(filter.activeIssuesCount) issues")
-                }
-            }
-            .onDelete(perform: delete)
-        }
-    }
-    
     var body: some View {
         List(selection: $dataController.selectedFilter) {
-            smartFiltersSection()
-            tagFiltersSection()
+            Section("Smart Filters") {
+                ForEach(smartFilters, content: SmartFilterRow.init)
+            }
+            
+            Section("Tags") {
+                ForEach(tagFilters) { filter in
+                    UserFilterRow(filter: filter, rename: rename, delete: delete)
+                }
+                .onDelete(perform: delete)
+            }
         }
         .toolbar {
-            Button(action: dataController.newTag) {
-                Label("Add Tag", systemImage: "plus")
-            }
-            
-            Button {
-                showingAwards.toggle()
-            } label: {
-                Label("Show Awards", systemImage: "rosette")
-            }
-            
-            #if DEBUG
-            Button {
-                dataController.deleteAll()
-                dataController.createSampleData()
-            } label: {
-                Label("ADD SAMPLES", systemImage: "command.square.fill")
-            }
-            #endif
+            SidebarViewToolbar(showingAwards: $showingAwards)
         }
         .alert("Rename Tag", isPresented: $renamingTag) {
             Button("OK", action: completeRename)

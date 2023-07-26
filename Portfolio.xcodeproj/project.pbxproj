@@ -23,6 +23,12 @@
 		52565DA52A6F18B900AFD3BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 52565DA72A6F18B900AFD3BB /* Localizable.strings */; };
 		52565DA82A6F18C400AFD3BB /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 52565DAA2A6F18C400AFD3BB /* Localizable.stringsdict */; };
 		52565DAB2A6F18D300AFD3BB /* Awards.json in Resources */ = {isa = PBXBuildFile; fileRef = 52565DAD2A6F18D300AFD3BB /* Awards.json */; };
+		52565DB32A71534A00AFD3BB /* SidebarViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52565DB22A71534A00AFD3BB /* SidebarViewToolbar.swift */; };
+		52565DB52A7155DC00AFD3BB /* IssueViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52565DB42A7155DC00AFD3BB /* IssueViewToolbar.swift */; };
+		52565DB72A71572C00AFD3BB /* ContentViewToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52565DB62A71572C00AFD3BB /* ContentViewToolbar.swift */; };
+		52565DB92A7159B700AFD3BB /* TagsMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52565DB82A7159B700AFD3BB /* TagsMenuView.swift */; };
+		52565DBB2A715B2E00AFD3BB /* SmartFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52565DBA2A715B2E00AFD3BB /* SmartFilterRow.swift */; };
+		52565DBD2A715BDB00AFD3BB /* UserFilterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52565DBC2A715BDB00AFD3BB /* UserFilterRow.swift */; };
 		52E6AC432A67827D00B21AF4 /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6AC422A67827D00B21AF4 /* Issue-CoreDataHelpers.swift */; };
 		52E6AC452A67828B00B21AF4 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6AC442A67828B00B21AF4 /* Tag-CoreDataHelpers.swift */; };
 		52E6AC472A6853EC00B21AF4 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6AC462A6853EC00B21AF4 /* IssueRow.swift */; };
@@ -54,6 +60,12 @@
 		52565DAF2A6F196D00AFD3BB /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = hu; path = hu.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		52565DB02A6F197400AFD3BB /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = hu; path = hu.lproj/Awards.json; sourceTree = "<group>"; };
 		52565DB12A6F198200AFD3BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Awards.json; sourceTree = "<group>"; };
+		52565DB22A71534A00AFD3BB /* SidebarViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewToolbar.swift; sourceTree = "<group>"; };
+		52565DB42A7155DC00AFD3BB /* IssueViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewToolbar.swift; sourceTree = "<group>"; };
+		52565DB62A71572C00AFD3BB /* ContentViewToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewToolbar.swift; sourceTree = "<group>"; };
+		52565DB82A7159B700AFD3BB /* TagsMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagsMenuView.swift; sourceTree = "<group>"; };
+		52565DBA2A715B2E00AFD3BB /* SmartFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartFilterRow.swift; sourceTree = "<group>"; };
+		52565DBC2A715BDB00AFD3BB /* UserFilterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFilterRow.swift; sourceTree = "<group>"; };
 		52E6AC422A67827D00B21AF4 /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		52E6AC442A67828B00B21AF4 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		52E6AC462A6853EC00B21AF4 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
@@ -95,13 +107,19 @@
 				5238DF282A6752390064A504 /* Info.plist */,
 				5238DF162A67371B0064A504 /* PortfolioApp.swift */,
 				5238DF2B2A676BFE0064A504 /* SidebarView.swift */,
+				52565DBC2A715BDB00AFD3BB /* UserFilterRow.swift */,
+				52565DBA2A715B2E00AFD3BB /* SmartFilterRow.swift */,
+				52565DB22A71534A00AFD3BB /* SidebarViewToolbar.swift */,
 				52565DAA2A6F18C400AFD3BB /* Localizable.stringsdict */,
 				52565D952A6D96CF00AFD3BB /* Bundle-Decodable.swift */,
 				5238DF2F2A676FC00064A504 /* Filter.swift */,
 				5238DF2D2A676C0B0064A504 /* DetailView.swift */,
 				52E6AC482A685DA200B21AF4 /* IssueView.swift */,
+				52565DB82A7159B700AFD3BB /* TagsMenuView.swift */,
+				52565DB42A7155DC00AFD3BB /* IssueViewToolbar.swift */,
 				52E6AC4A2A685DAC00B21AF4 /* NoIssueView.swift */,
 				5238DF182A67371B0064A504 /* ContentView.swift */,
+				52565DB62A71572C00AFD3BB /* ContentViewToolbar.swift */,
 				52E6AC462A6853EC00B21AF4 /* IssueRow.swift */,
 				5238DF292A67526E0064A504 /* DataController.swift */,
 				52E6AC422A67827D00B21AF4 /* Issue-CoreDataHelpers.swift */,
@@ -202,7 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5238DF302A676FC00064A504 /* Filter.swift in Sources */,
+				52565DB92A7159B700AFD3BB /* TagsMenuView.swift in Sources */,
 				52565D9C2A6D9CDB00AFD3BB /* Award.swift in Sources */,
+				52565DB52A7155DC00AFD3BB /* IssueViewToolbar.swift in Sources */,
+				52565DBB2A715B2E00AFD3BB /* SmartFilterRow.swift in Sources */,
 				52565D9E2A6D9DB300AFD3BB /* AwardsView.swift in Sources */,
 				52E6AC452A67828B00B21AF4 /* Tag-CoreDataHelpers.swift in Sources */,
 				5238DF272A674FC70064A504 /* Main.xcdatamodeld in Sources */,
@@ -210,9 +231,12 @@
 				52565D962A6D96CF00AFD3BB /* Bundle-Decodable.swift in Sources */,
 				5238DF2E2A676C0B0064A504 /* DetailView.swift in Sources */,
 				5238DF2A2A67526E0064A504 /* DataController.swift in Sources */,
+				52565DB72A71572C00AFD3BB /* ContentViewToolbar.swift in Sources */,
 				5238DF2C2A676BFE0064A504 /* SidebarView.swift in Sources */,
 				5238DF192A67371B0064A504 /* ContentView.swift in Sources */,
+				52565DB32A71534A00AFD3BB /* SidebarViewToolbar.swift in Sources */,
 				52E6AC492A685DA200B21AF4 /* IssueView.swift in Sources */,
+				52565DBD2A715BDB00AFD3BB /* UserFilterRow.swift in Sources */,
 				52E6AC4B2A685DAC00B21AF4 /* NoIssueView.swift in Sources */,
 				52E6AC472A6853EC00B21AF4 /* IssueRow.swift in Sources */,
 				5238DF172A67371B0064A504 /* PortfolioApp.swift in Sources */,
