@@ -13,7 +13,7 @@ struct TagsMenuView: View {
     var body: some View {
         Menu {
             // show selected tags first
-            
+
             ForEach(issue.issueTags) { tag in
                 Button {
                     issue.removeFromTags(tag)
@@ -21,13 +21,13 @@ struct TagsMenuView: View {
                     Label(tag.tagName, systemImage: "checkmark")
                 }
             }
-            
+
             // now the unselected
             let otherTags = dataController.missingTags(from: issue)
-            
+
             if otherTags.isEmpty == false {
                 Divider()
-                
+
                 Section("Add Tags") {
                     ForEach(otherTags) {tag in
                         Button(tag.tagName) {

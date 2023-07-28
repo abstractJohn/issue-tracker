@@ -26,17 +26,19 @@ struct IssueView: View {
                     Text("Medium").tag(Int16(1))
                     Text("High").tag(Int16(2))
                 }
-                
+
                 TagsMenuView(issue: issue)
-                
+
             }
             Section {
                 VStack(alignment: .leading) {
                     Text("Basic Information")
                         .font(.title2)
                         .foregroundStyle(.secondary)
-                    
-                    TextField("Description", text: $issue.issueContent, prompt: Text("Enter the issue description here"), axis: .vertical)
+
+                    TextField("Description", text: $issue.issueContent,
+                              prompt: Text("Enter the issue description here"),
+                              axis: .vertical)
                 }
             }
         }

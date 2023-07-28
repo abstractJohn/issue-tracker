@@ -25,7 +25,7 @@ extension Issue {
     var issueModificationDate: Date {
         modifiedDate ?? .now
     }
-    
+
     static var example: Issue {
         let controller = DataController(inMemory: true)
         let viewContext = controller.container.viewContext
@@ -37,41 +37,41 @@ extension Issue {
         issue.createdDate = .now
         return issue
     }
-    
+
     var issueTags: [Tag] {
         let result = tags?.allObjects as? [Tag] ?? []
         return result.sorted()
     }
-    
+
     var issueTagsList: String {
         guard let tags else { return "No Tags" }
-        
+
         if tags.count == 0 {
             return "No Tags"
         } else {
             return issueTags.map(\.tagName).formatted()
         }
     }
-    
+
     var issueStatus: String {
         if completed {
             return "Closed"
-            
+
         } else {
             return "Open"
         }
     }
-    
+
     var issueFormattedCreationDate: String {
         issueCreationDate.formatted(date: .numeric, time: .omitted)
     }
 }
 
 extension Issue: Comparable {
-    public static func <(lhs: Issue, rhs: Issue) -> Bool {
+    public static func < (lhs: Issue, rhs: Issue) -> Bool {
         let left = lhs.issueTitle.localizedLowercase
         let right = rhs.issueTitle.localizedLowercase
-        
+
         if left == right {
             return lhs.issueCreationDate < rhs.issueCreationDate
         } else {

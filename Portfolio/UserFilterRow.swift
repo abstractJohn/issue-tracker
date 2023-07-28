@@ -21,7 +21,7 @@ struct UserFilterRow: View {
                     } label: {
                         Label("Rename", systemImage: "pencil")
                     }
-                    
+
                     Button(role: .destructive) {
                         delete(filter)
                     } label: {

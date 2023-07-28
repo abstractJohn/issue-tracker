@@ -16,7 +16,7 @@ struct IssueRow: View {
                 Image(systemName: "exclamationmark.circle")
                     .imageScale(.large)
                     .opacity(issue.priority == 2 ? 1 : 0)
-                
+
                 VStack(alignment: .leading) {
                     Text(issue.issueTitle)
                         .font(.headline)
@@ -26,7 +26,7 @@ struct IssueRow: View {
                         .lineLimit(1)
                 }
                 Spacer()
-                
+
                 VStack(alignment: .trailing) {
                     Text(issue.issueFormattedCreationDate)
                         .accessibilityLabel(issue.issueCreationDate.formatted(date: .abbreviated, time: .omitted))
@@ -40,7 +40,7 @@ struct IssueRow: View {
             }
         }
         .accessibilityHint(issue.priority == 2 ? "High Priority" : "")
-        
+
     }
 }
 

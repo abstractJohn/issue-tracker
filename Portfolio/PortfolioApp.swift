@@ -24,7 +24,7 @@ struct PortfolioApp: App {
             .environmentObject(dataController)
             .onChange(of: scenePhase) { phase in
                 if phase != .active {
-                dataController.save()
+                    dataController.save()
                 }
             }
         }
