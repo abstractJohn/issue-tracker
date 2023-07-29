@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct IssueRow: View {
-    @EnvironmentObject var dataController: DataController
     @ObservedObject var issue: Issue
     var body: some View {
         NavigationLink(value: issue) {
