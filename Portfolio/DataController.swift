@@ -16,14 +16,12 @@ enum Status {
     case all, open, closed
 }
 
-
 /// An environment singleton responsible for maintaining our CoreData stack
 /// Includes saving, deleting, and even counting fetch requests
 class DataController: ObservableObject {
 
     /// The CloudKit container to hold all the data in this app
     let container: NSPersistentCloudKitContainer
-
 
     /// A property to store the currently selecteded Filter
     /// (whether a user tag or smart filter) which defaults to the "All Issues" smart filter
@@ -77,7 +75,6 @@ class DataController: ObservableObject {
 
         return (try? container.viewContext.fetch(request).sorted()) ?? []
     }
-
 
     /// Initializes a Data Controller with an option to make temporary for use in previews and tests
     ///
@@ -139,7 +136,6 @@ class DataController: ObservableObject {
 
         try? viewContext.save()
     }
-
 
     /// Runs a fetch request with various predicates which filter the user's issues based on
     /// tag, title, and content text as well as search tokens, priority, and completetion status
@@ -213,14 +209,12 @@ class DataController: ObservableObject {
         save()
     }
 
-
     /// Counts the records in the provided FetchRequest regardless of data type
     /// - Parameter fetchRequest: a FetchRequest to count
     /// - Returns: the number of records which would be returned by the FetchRequest
     func count<T>(for fetchRequest: NSFetchRequest<T>) -> Int {
         (try? container.viewContext.count(for: fetchRequest)) ?? 0
     }
-
 
     func hasEarned(award: Award) -> Bool {
         switch award.criterion {
@@ -243,7 +237,6 @@ class DataController: ObservableObject {
         }
     }
 
-
     /// Saves our CoreData context iff there are changes.
     /// This silently ignores any errors caused by saving which
     /// should be fine since all attributes are optional.
@@ -255,7 +248,6 @@ class DataController: ObservableObject {
         }
     }
 
-
     /// queues a save to be performed by the MainActor in 3 seconds.
     /// Cancels any previously scheduled saves first.
     func queueSave() {
@@ -266,7 +258,6 @@ class DataController: ObservableObject {
             save()
         }
     }
-
 
     /// A general function to delete any object managed in the current container
     /// - Parameter object: The managed object to delete
@@ -301,7 +292,6 @@ class DataController: ObservableObject {
 
         save()
     }
-
 
     /// Finds the tags in the CoreData container which are not currently associated with the provided Issue
     /// These are used as a list of tags the user may choose to add to the issue
