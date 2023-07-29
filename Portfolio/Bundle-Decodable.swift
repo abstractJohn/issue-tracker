@@ -8,6 +8,14 @@
 import Foundation
 
 extension Bundle {
+
+    /// Decodes a JSON file from the App Bundle into an object of the provided type
+    /// - Parameters:
+    ///   - file: the JSON data to decode
+    ///   - type: the object type to create
+    ///   - dateDecodingStrategy: strategy for decoding the JSON dates
+    ///   - keyDecodingStrategy: stragegy for decoding the JSON keys. Defaults to the Default Keys
+    /// - Returns: an object of the provided type from the JSON data in the file
     func decode<T: Decodable>(
         _ file: String,
         as type: T.Type = T.self,
