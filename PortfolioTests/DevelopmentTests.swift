@@ -37,7 +37,7 @@ final class DevelopmentTests: BaseTestCase {
     func testSampleIssueHasHighPriority() {
         let issue = Issue.example
 
-        XCTAssertTrue(issue.priority == Int16(2), "A sample issue should be high priority.")
+        XCTAssertEqual(issue.priority, Int16(2), "A sample issue should have high priority.")
     }
 
 }
