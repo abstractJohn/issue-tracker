@@ -32,6 +32,9 @@
             reference = "container:Portfolio.xctestplan"
             default = "YES">
          </TestPlanReference>
+         <TestPlanReference
+            reference = "container:PortfolioTests/Portfolio.xctestplan">
+         </TestPlanReference>
       </TestPlans>
       <Testables>
          <TestableReference
