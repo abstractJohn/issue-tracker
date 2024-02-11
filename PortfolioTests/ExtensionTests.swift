@@ -13,12 +13,11 @@ final class ExtensionTests: BaseTestCase {
     func testIssueTitleUnwrap() {
         // Given
         let issue = Issue(context: managedObjectContext)
-        
         // When
         issue.title = "Example issue"
         // Then
         XCTAssertEqual(issue.issueTitle, "Example issue", "Changing title should also change issueTitle.")
-        
+
         // When
         issue.issueTitle = "Updated issue"
         // Then
@@ -55,7 +54,6 @@ final class ExtensionTests: BaseTestCase {
         // Given
         let tag = Tag(context: managedObjectContext)
         let issue = Issue(context: managedObjectContext)
-        
         // Then
         XCTAssertEqual(issue.issueTags.count, 0, "A new issue should have no tags")
         // When
@@ -88,7 +86,6 @@ final class ExtensionTests: BaseTestCase {
         // And a third issue with a title coming earlier in the sort, but a created date much later
         issue3.title = "A Issue"
         issue3.createdDate = .now.addingTimeInterval(100)
-        
         // When we put the issues in an array and sort it
         let allIssues = [issue1, issue2, issue3]
         let sorted = allIssues.sorted()
