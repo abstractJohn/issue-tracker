@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521A90982B71B6B700555918 /* DecodableDictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = 521A90972B71B6B700555918 /* DecodableDictionary.json */; };
+		521A909A2B71B6FE00555918 /* DecodableString.json in Resources */ = {isa = PBXBuildFile; fileRef = 521A90992B71B6FE00555918 /* DecodableString.json */; };
 		5238DF172A67371B0064A504 /* PortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF162A67371B0064A504 /* PortfolioApp.swift */; };
 		5238DF192A67371B0064A504 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5238DF182A67371B0064A504 /* ContentView.swift */; };
 		5238DF1B2A67371D0064A504 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5238DF1A2A67371D0064A504 /* Assets.xcassets */; };
@@ -34,6 +36,7 @@
 		528367AD2B65EAD1000614BB /* TagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528367AC2B65EAD1000614BB /* TagTests.swift */; };
 		528367B12B6FDEFE000614BB /* AwardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528367B02B6FDEFE000614BB /* AwardTests.swift */; };
 		528367B42B6FE2F8000614BB /* DevelopmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528367B32B6FE2F8000614BB /* DevelopmentTests.swift */; };
+		528367B62B703A64000614BB /* ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528367B52B703A64000614BB /* ExtensionTests.swift */; };
 		52E6AC432A67827D00B21AF4 /* Issue-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6AC422A67827D00B21AF4 /* Issue-CoreDataHelpers.swift */; };
 		52E6AC452A67828B00B21AF4 /* Tag-CoreDataHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6AC442A67828B00B21AF4 /* Tag-CoreDataHelpers.swift */; };
 		52E6AC472A6853EC00B21AF4 /* IssueRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E6AC462A6853EC00B21AF4 /* IssueRow.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521A90952B71B3E000555918 /* PortfolioPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = PortfolioPlan.xctestplan; sourceTree = "<group>"; };
+		521A90972B71B6B700555918 /* DecodableDictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableDictionary.json; sourceTree = "<group>"; };
+		521A90992B71B6FE00555918 /* DecodableString.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DecodableString.json; sourceTree = "<group>"; };
 		5238DF132A67371B0064A504 /* Portfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5238DF162A67371B0064A504 /* PortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioApp.swift; sourceTree = "<group>"; };
 		5238DF182A67371B0064A504 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,8 +92,8 @@
 		528367AA2B659D71000614BB /* AssetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTests.swift; sourceTree = "<group>"; };
 		528367AC2B65EAD1000614BB /* TagTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagTests.swift; sourceTree = "<group>"; };
 		528367B02B6FDEFE000614BB /* AwardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardTests.swift; sourceTree = "<group>"; };
-		528367B22B6FE1A8000614BB /* Portfolio.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Portfolio.xctestplan; sourceTree = "<group>"; };
 		528367B32B6FE2F8000614BB /* DevelopmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevelopmentTests.swift; sourceTree = "<group>"; };
+		528367B52B703A64000614BB /* ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTests.swift; sourceTree = "<group>"; };
 		52E6AC422A67827D00B21AF4 /* Issue-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Issue-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		52E6AC442A67828B00B21AF4 /* Tag-CoreDataHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tag-CoreDataHelpers.swift"; sourceTree = "<group>"; };
 		52E6AC462A6853EC00B21AF4 /* IssueRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRow.swift; sourceTree = "<group>"; };
@@ -113,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521A90962B71B63800555918 /* testFixtures */ = {
+			isa = PBXGroup;
+			children = (
+				521A90972B71B6B700555918 /* DecodableDictionary.json */,
+				521A90992B71B6FE00555918 /* DecodableString.json */,
+			);
+			path = testFixtures;
+			sourceTree = "<group>";
+		};
 		5238DF0A2A67371B0064A504 = {
 			isa = PBXGroup;
 			children = (
@@ -234,12 +249,14 @@
 		528367A12B6599E0000614BB /* PortfolioTests */ = {
 			isa = PBXGroup;
 			children = (
+				521A90962B71B63800555918 /* testFixtures */,
 				528367B02B6FDEFE000614BB /* AwardTests.swift */,
 				528367B32B6FE2F8000614BB /* DevelopmentTests.swift */,
-				528367B22B6FE1A8000614BB /* Portfolio.xctestplan */,
+				528367B52B703A64000614BB /* ExtensionTests.swift */,
 				528367A22B6599E0000614BB /* PortfolioTests.swift */,
 				528367AA2B659D71000614BB /* AssetTests.swift */,
 				528367AC2B65EAD1000614BB /* TagTests.swift */,
+				521A90952B71B3E000555918 /* PortfolioPlan.xctestplan */,
 			);
 			path = PortfolioTests;
 			sourceTree = "<group>";
@@ -340,6 +357,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521A909A2B71B6FE00555918 /* DecodableString.json in Resources */,
+				521A90982B71B6B700555918 /* DecodableDictionary.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +422,7 @@
 				528367AB2B659D71000614BB /* AssetTests.swift in Sources */,
 				528367B12B6FDEFE000614BB /* AwardTests.swift in Sources */,
 				528367AD2B65EAD1000614BB /* TagTests.swift in Sources */,
+				528367B62B703A64000614BB /* ExtensionTests.swift in Sources */,
 				528367A32B6599E0000614BB /* PortfolioTests.swift in Sources */,
 				528367B42B6FE2F8000614BB /* DevelopmentTests.swift in Sources */,
 			);

@@ -29,11 +29,8 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:Portfolio.xctestplan"
+            reference = "container:PortfolioTests/PortfolioPlan.xctestplan"
             default = "YES">
-         </TestPlanReference>
-         <TestPlanReference
-            reference = "container:PortfolioTests/Portfolio.xctestplan">
          </TestPlanReference>
       </TestPlans>
       <Testables>
