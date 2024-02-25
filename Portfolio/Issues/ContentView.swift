@@ -17,7 +17,7 @@ struct ContentView: View {
 
     var body: some View {
         List(selection: $viewModel.selectedIssue) {
-            ForEach(viewModel.dataController.issuesForSelectedFilter()) { issue in
+            ForEach(viewModel.issuesForSelectedFilter()) { issue in
                 IssueRow(issue: issue)
             }
             .onDelete(perform: viewModel.delete)
@@ -30,7 +30,9 @@ struct ContentView: View {
             Text(tag.tagName)
         }
         .keyboardType(.twitter)
-        .toolbar(content: ContentViewToolbar.init)
+        .toolbar {
+            ContentViewToolbar(viewModel: viewModel)
+        }
     }
 
 }
